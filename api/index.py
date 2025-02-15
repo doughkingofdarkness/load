@@ -12,5 +12,5 @@ def hme():
 @app.route('/loader/colonel')
 def home():
     script = 'print("hello world")'
-    ug = request.headers.get('user-agent')
+    ug = request.headers.get('User-Agent')
     return safe(ug,script)
