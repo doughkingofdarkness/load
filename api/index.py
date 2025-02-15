@@ -5,10 +5,10 @@ ugs = [
 ]
 @app.route('/')
 def hme():
-    return jsonify({"Running!"})
+    return jsonify("Running!")
 @app.route('/loader/colonel')
 def home():
-    script = r'print("hello world")'
+    script = 'print("hello world")'
     found = False
     ug = request.headers.get('user-agent')
     for i,v in range(ugs):
