@@ -3,6 +3,9 @@ app = Flask(__name__)
 ugs = [
     "FloraAgent"
 ]
+@app.route('/')
+def hme():
+    return jsonify("Running!")
 @app.route('/loader/colonel')
 def home():
     script = r'print("hello world")'
