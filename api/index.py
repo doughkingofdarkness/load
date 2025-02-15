@@ -4,7 +4,7 @@ ugs = [
     "FloraAgent"
 ]
 def safe(user,script):
-    if ug in ugs:
+    if user in ugs:
         return jsonify(script)
     else:
         return jsonify("game.Players.LocalPlayer:Kick('Your Executor is not supported! Join Colonel Server and contact the Owner')")
