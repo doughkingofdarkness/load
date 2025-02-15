@@ -1,12 +1,12 @@
-from flask import Flask,jsonify,request
+from flask import Flask,request
 
 app = Flask(__name__)
 ugs = ["FloraAgent"]
 def safe(user,script):
     if user in ugs:
-        return jsonify(script)
+        return script
     else:
-        return jsonify("game.Players.LocalPlayer:Kick('Your Executor is not supported! Join Colonel Server and contact the Owner')")
+        return "game.Players.LocalPlayer:Kick('Your Executor is not supported! Join Colonel Server and contact the Owner')"
 @app.route('/loader/colonel')
 def home():
     script = 'print("hello world")'
