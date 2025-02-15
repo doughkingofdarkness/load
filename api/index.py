@@ -1,8 +1,6 @@
 from flask import Flask,jsonify
 app = Flask(__name__)
-ugs = [
-    "FloraAgent"
-]
+ugs = ["FloraAgent"]
 def safe(user,script):
     if user in ugs:
         return jsonify(script)
