@@ -14,4 +14,4 @@ def home():
     return safe(ug, script)
 @app.route('/')
 def hme():
-    return jsonify("Running!")
+    return "Running!"
