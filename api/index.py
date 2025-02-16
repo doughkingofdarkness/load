@@ -16,12 +16,12 @@ def safe(user,script):
         return "game.Players.LocalPlayer:Kick('Your Executor is not supported! Join Colonel Server and contact the Owner')"
 @app.route('/loader/colonel')
 def home():
-    script = readfile("scripts/loader-colonel.txt")
+    script = readfile("data/loader-colonel.txt")
     ug = request.headers.get('User-Agent')
     return safe(ug, script)
 @app.route('/tempload/colonel')
 def temploadcol():
-    return readfile("scripts/loader-colonel.txt")
+    return readfile("data/loader-colonel.txt")
 @app.route('/')
 def hme():
     return "Running!"
