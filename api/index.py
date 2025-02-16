@@ -19,6 +19,9 @@ def home():
     script = readfile("scripts/loader-colonel.txt")
     ug = request.headers.get('User-Agent')
     return safe(ug, script)
+@app.route('/tempload/colonel')
+def temploadcol():
+    return readfile("scripts/loader-colonel.txt")
 @app.route('/')
 def hme():
     return "Running!"
